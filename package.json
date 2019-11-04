@@ -1,7 +1,6 @@
 {
   "name": "admin-frontend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "webpack": "^4.41.2",
@@ -21,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time/issues"
   },
-  "homepage": "https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time#readme"
+  "homepage": "https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
