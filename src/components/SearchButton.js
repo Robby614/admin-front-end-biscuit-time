@@ -1,5 +1,5 @@
 const Deact = require("../libs/deact");
-const AppTitle = require("./AppTitle");
+const AppTitle = require("./Title");
 const Button = require("./Button");
 
 function SearchButton() {
@@ -9,6 +9,7 @@ function SearchButton() {
       onclick: () => {
         fetch("http://localhost:8080/api/artists")
           .then(function(response) {
+            console.log("button clicked; json parsing")
             return response.json();
           })
           .then(function(search) {

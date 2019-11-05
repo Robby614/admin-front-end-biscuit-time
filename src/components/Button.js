@@ -1,7 +1,7 @@
 const Deact = require("../libs/deact");
 
-function Button (content) {
-    return Deact.create("button", {}, content);
+function Button (attributes, content) {
+    return Deact.create("button", attributes, content);
 };
 
 module.exports = Button;
