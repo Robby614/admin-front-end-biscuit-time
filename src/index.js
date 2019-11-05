@@ -8,8 +8,7 @@ Deact.render(Header(), document.querySelector('.app'));
 const subheader = Deact.create("h2", {}, "Artists");
 Deact.render(subheader, document.querySelector(".app"));
 Deact.render(SearchButton(), document.querySelector('.app'));
-// const x = document.querySelector("button");
-// x.onclick= () => console.log('clicked');
+
 
 
 

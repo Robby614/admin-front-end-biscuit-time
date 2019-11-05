@@ -9,7 +9,6 @@ function SearchButton() {
       onclick: () => {
         fetch("http://localhost:8080/api/artists")
           .then(function(response) {
-            console.log("button clicked; json parsing")
             return response.json();
           })
           .then(function(search) {
@@ -19,12 +18,10 @@ function SearchButton() {
                 document.querySelector(".app")
               );
             });
-            console.log(data);
           })
           .catch(function(error) {
             console.log(error);
           });
-        console.log("button clicked!");
       }
     },
     "Search"
