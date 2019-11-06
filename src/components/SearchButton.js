@@ -1,5 +1,5 @@
 const Deact = require("../libs/deact");
-const Title = require("./Title");
+const Text = require("./Text");
 const Button = require("./Button");
 
 function SearchButton() {
@@ -14,7 +14,7 @@ function SearchButton() {
           .then(function(search) {
             search.forEach(artist => {
               Deact.render(
-                Title(artist.name, "red"),
+                Text(artist.name, "red"),
                 document.querySelector(".app")
               );
             });

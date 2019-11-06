@@ -1,6 +1,6 @@
 const Deact = require("./libs/deact");
 const Header = require("./components/Header");
-const Button = require("./components/Button");
+const Card = require("./components/Card");
 const SearchButton = require("./components/SearchButton");
 
 
@@ -12,6 +12,7 @@ function AppContainer() {
 
 
 const subheader = Deact.create("h2", {}, "Artists");
-Deact.render(subheader, document.querySelector(".app"));
-Deact.render(SearchButton(), document.querySelector('.app'));
+Deact.render(subheader, document.querySelector(".app-container"));
+Deact.render(SearchButton(), document.querySelector('.app-container'));
+
 

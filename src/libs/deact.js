@@ -1,6 +1,7 @@
 module.exports = {
   
   render(child, parent) {
+    // parent.innerHTML = "";
     parent.append(child);
   },
 
