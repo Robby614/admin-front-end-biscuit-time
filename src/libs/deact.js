@@ -1,8 +1,11 @@
 module.exports = {
+  
   render(child, parent) {
     parent.append(child);
   },
+
   create(element, attributes = {}, content) {
+
     const createdElement = document.createElement(element);
 
     for (key in attributes) {
@@ -26,5 +29,7 @@ module.exports = {
     }
 
     return createdElement;
+
   }
+
 };
