@@ -4,12 +4,11 @@ const Button = require("./components/Button");
 const SearchButton = require("./components/SearchButton");
 
 
-Deact.render(Deact.create("section", { class: `app-container` }, [Header()]), document.querySelector('.app'));
+Deact.render(AppContainer(), document.querySelector('.app'));
 
-
-// Deact.render(Header(), document.querySelector('.app'));
-
-
+function AppContainer() {
+    return Deact.create("section", { class: `app-container` }, [Header()])
+};
 
 
 const subheader = Deact.create("h2", {}, "Artists");
