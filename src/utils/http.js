@@ -4,7 +4,7 @@ module.exports = {
         .then(function(response) {
             return response.json();
         })
-        .then(callback)
+        .then(response => callback(response))
         .catch(function(error) {
             console.error(error);
         });
