@@ -1,12 +1,17 @@
 const Deact = require("../libs/deact");
 const Title = require("./Title");
+const ArtistButton = require("./ArtistButton");
+const Nav = require("./Nav");
 
 function Header() {
     return Deact.create(
         "header",
-        {},
+        {
+            style: `background-color: pink; display: flex; justify-content: space-between; padding: 1rem;`
+        },
         [
-        Title("Biscuit Time!", "black"),
+        Title("black-text-color", "Biscuit Time!"),
+        Nav({}, [ArtistButton()])
         ]
     );
 }
