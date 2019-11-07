@@ -1,10 +1,10 @@
 const Deact = require("../libs/deact");
-const Http = require("../utils/http");
-const Button = require("./Button");
+const Button = require("./button");
+const HTTP = require("../utils/http");
 const ArtistCard = require("./ArtistCard");
 
-function Card() {
-    function renderCard() {
+function ArtistsButton(){
+    function renderArtists() {
         Http.getRequest("http://localhost:8080/api/artists", function({ artists }) {
             artists.forEach(artist => {
                 Deact.render(
@@ -15,14 +15,14 @@ function Card() {
         });
     }
 
+
     return Button(
         {
             class: "artists-button",
-            onclick: renderCard
+            onclick: renderArtists,
             
         },
-        "Get Artists"
+        "Artists"
     );
-}
-
-module.exports = Card;
+    }
+module.exports = ArtistsButton;
