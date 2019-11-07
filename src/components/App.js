@@ -1,9 +1,9 @@
 const Deact = require("../libs/deact");
-const MainHeader = require("./Header");
+const Header = require("./Header");
 
 function App() {
   return Deact.create("section", { class: `app-container` }, [
-    MainHeader(),
+    Header(),
   ]);
 }
 
