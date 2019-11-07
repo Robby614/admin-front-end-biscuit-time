@@ -1,6 +1,6 @@
 const Deact = require("../libs/deact");
 const Button = require("./button");
-const HTTP = require("../utils/http");
+const Http = require("../utils/http");
 const ArtistCard = require("./ArtistCard");
 
 function ArtistsButton(){
@@ -20,7 +20,7 @@ function ArtistsButton(){
         {
             class: "artists-button",
             onclick: renderArtists,
-            
+            style: `border: 2px solid black;`
         },
         "Artists"
     );
