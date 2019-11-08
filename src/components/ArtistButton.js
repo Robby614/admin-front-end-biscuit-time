@@ -11,8 +11,8 @@ function ArtistsButton(){
             ArtistPage(),
             document.querySelector(".content .container")
         );
-        Http.getRequest("http://localhost:8080/api/artists", function(response) {
-            const { albums, artists } = response;
+        Http.getRequest("http://localhost:8080/api/artists", function(artists) {
+            // const { albums, artists } = response;
             artists.forEach(function(artist) {
                 Deact.render(
                     ArtistCard(artist),
