@@ -7,7 +7,8 @@ function ArtistCard(artist) {
             Deact.create("img", { class: `artist-card__imageUrl`, src:`${artist.imageUrl}`, alt:`${artist.name}`}, ""), 
             Deact.create ("h5", { class: `artist-card__record-label`}, artist.recordLabel),
             Deact.create("h5", { class:  `artist-card__hometown`}, artist.homeTown), 
-            Deact.render(AlbumButton())
+            Deact.create("button", {}, "albums")
+            //Deact.render(Deact.create(AlbumButton(), {}, ""), ArtistCard)
     ]);
 }
 
