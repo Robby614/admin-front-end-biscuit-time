@@ -20,6 +20,10 @@ body {
   border: 2px solid black;
 }
 
+.artist-card__imageUrl{
+  max-width: 10rem;
+}
+
 header {
   width: 600px;
 }
