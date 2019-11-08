@@ -12,7 +12,7 @@ function AlbumsButton() {
             AlbumPage(),
             document.querySelector(".content .container")
         );
-        Http.getRequest("http://localhost:8080/api/albums", function (albums) {
+        Http.getRequest("http://localhost:8080/api/artist/${artist.id}/albums", function (albums) {
             albums.forEach(function (album) {
                 Deact.render(
                     AlbumCard(album),

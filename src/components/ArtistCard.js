@@ -10,7 +10,7 @@ function ArtistCard(artist) {
             Deact.create("button", {}, "albums"),
 
             Deact.create("input", {type: `hidden`, value: `${artist.id}`}, "")
-            //Deact.render(Deact.create(AlbumButton(), {}, ""), ArtistCard)
+            
     ]);
 }
 
