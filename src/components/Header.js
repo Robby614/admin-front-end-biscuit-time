@@ -1,6 +1,7 @@
 const Deact = require("../libs/deact");
 const Title = require("./Title");
 const ArtistButton = require("./ArtistButton");
+const AlbumButton = require("./AlbumButton");
 const Nav = require("./Nav");
 
 function Header() {
