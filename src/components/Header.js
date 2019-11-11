@@ -12,7 +12,7 @@ async function Header() {
         },
         [
         Title("black-text-color", "Biscuit Time!"),
-        Nav({}, [ArtistButton(), await AlbumButton()])
+        Nav({}, [ArtistButton()])
         ]
     );
 }
