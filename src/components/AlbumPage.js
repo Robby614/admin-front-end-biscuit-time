@@ -4,7 +4,7 @@ const AlbumForm = require("./AlbumForm");
 
 function AlbumPage() {
   return Deact.create("article", { class: "albums-page" }, [
-    AlbumForm(),
+    // AlbumForm(),
     AlbumCards()
   ]);
 }
