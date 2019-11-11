@@ -12,7 +12,7 @@ function ArtistForm() {
         const recordLabel = document.querySelector(".artist-record-label").value;
         const homeTown = document.querySelector(".artist-home-town").value;
         
-        fetch(`http://localhost:8080/api.artists`, {
+        fetch(`http://localhost:8080/api/artists`, {
             method: "Post",
             headers: {
                 "Content-Type": "application/json"

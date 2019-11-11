@@ -4,7 +4,7 @@ const ArtistButton = require("./ArtistButton");
 const AlbumButton = require("./AlbumButton");
 const Nav = require("./Nav");
 
-function Header() {
+async function Header() {
     return Deact.create(
         "header",
         {
@@ -12,7 +12,7 @@ function Header() {
         },
         [
         Title("black-text-color", "Biscuit Time!"),
-        Nav({}, [ArtistButton()])
+        Nav({}, [ArtistButton(), await AlbumButton()])
         ]
     );
 }
