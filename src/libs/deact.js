@@ -1,7 +1,7 @@
 module.exports = {
   
-  render(child, parent) {
-    parent.append(child);
+  async render(child, parent) {
+    parent.append(await child);
   },
 
   create(element, attributes = {}, content) {

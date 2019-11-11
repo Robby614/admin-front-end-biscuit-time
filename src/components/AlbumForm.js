@@ -8,20 +8,17 @@ function AlbumForm() {
 
     
     
-        const name = document.querySelector(".album-name").value;
-        const recordLabel = document.querySelector(".album-record-label").value;
-        const homeTown = document.querySelector(".album-home-town").value;
-        
-        fetch(`http://localhost:8080/api.albums`, {
+        const title = document.querySelector(".album-title").value;
+        const artist = document.querySelector(".album-artist").value;
+                
+        fetch(`http://localhost:8080/api/albums`, {
             method: "Post",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: name,
-                recordLabel: recordLabel,
-                homeTown: homeTown,
-
+                title: title,
+                artist: artist
             })
         })
             .then(response => {

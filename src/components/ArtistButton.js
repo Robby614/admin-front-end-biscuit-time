@@ -25,7 +25,7 @@ function ArtistsButton() {
         {
             class: "artists-button",
             onclick: renderArtists,
-            style: `border: 2px solid black;`
+            style: 'border: 2px solid black;'
         },
         "Artists"
     );
