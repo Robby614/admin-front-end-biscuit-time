@@ -10,7 +10,7 @@ function AlbumForm(id) {
         
                 
         fetch(`http://localhost:8080/api/artists/${id}/add-album`, {
-            method: "Post",
+            method: "Patch",
             headers: {
                 "Content-Type": "application/json"
             },
