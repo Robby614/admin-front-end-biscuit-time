@@ -9,12 +9,11 @@ function AlbumsButton(id) {
     function renderAlbums() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            AlbumPage(),
+            AlbumPage(id),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/artists/${id}/albums`, function (albums) {
-           //Http.getRequest("http://localhost:8080/api/albums", function (albums) {
-            albums.forEach(function (album) {
+        Http.getRequest(`http://localhost:8080/api/artists/${id}`, function (artist) {
+            artist.albums.forEach(function (album) {
                 Deact.render(
                     AlbumCard(album),
                     document.querySelector(".album-cards")

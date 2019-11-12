@@ -2,29 +2,39 @@ const Deact = require("../libs/deact");
 const Button = require("./Button");
 const Http = require("../utils/http");
 
-function AlbumForm() {
+function AlbumForm(id) {
     function handleSubmit(event) {
         event.preventDefault();
 
-    
-    
-        const title = document.querySelector(".album-title").value;
-        const artist = document.querySelector(".album-artist").value;
+         const title = document.querySelector(".artist-albums").value;
+        
                 
-        fetch(`http://localhost:8080/api/albums`, {
+        fetch(`http://localhost:8080/api/artists/${id}/add-album`, {
             method: "Post",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 title: title,
-                artist: artist
             })
         })
-            .then(response => {
-                console.log(album);
-            });
-    }
+        .then(response => {
+            return response.json();
+        })
+        .then(album => {
+            console.log(album);
+        });
+}
+    return Deact.create("form", { onsubmit: handleSubmit }, [
+
+    Deact.create(
+        "input",
+        { class: "artist-albums", placeholder: "Album", type: "text" },
+        ""
+      ),
+      Button({ type: "submit" }, "Submit")
+
+      ]);
 }
 
 module.exports = AlbumForm;
