@@ -9,11 +9,11 @@ function SongButton(id) {
     function renderSongs() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            SongPage(),
+            SongPage(id),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/albums/${id}/songs`, function (songs) {
-            songs.forEach(function (song) {
+        Http.getRequest(`http://localhost:8080/api/albums/${id}`, function (album) {
+            album.songs.forEach(function (song) {
                 Deact.render(
                     SongCard(song),
                     document.querySelector(".song-cards")
