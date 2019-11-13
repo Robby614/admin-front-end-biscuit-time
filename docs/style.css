@@ -16,12 +16,47 @@ body {
     text-align: center;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .artists-button {
   border: 2px solid black;
 }
 
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  padding: .5rem;
+  margin: .5rem;
+  width: 12rem;
+  /* max-width: 12rem; */
+}
+
 .artist-card__imageUrl{
   max-width: 10rem;
+}
+
+form {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.artist-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 header {
