@@ -6,16 +6,16 @@ function SongForm(id) {
     function handleSubmit(event) {
         event.preventDefault();
 
-         const title = document.querySelector(".album-songs").value;
+         const name = document.querySelector(".album-songs").value;
         
                 
         fetch(`http://localhost:8080/api/albums/${id}/add-song`, {
-            method: "Patch",
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                title: title,
+                name: name,
             })
         })
         .then(response => {
