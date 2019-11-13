@@ -12,12 +12,18 @@ function AlbumsButton(id) {
             AlbumPage(id),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/artists/${id}`, function (artist) {
+        Http.getRequest(`http://localhost:8080/api/artists/${id}`,
+         function (artist) {
+             Deact.render(
+                 artist.name,
+                 document.querySelector(".album-cards")
+             );
             artist.albums.forEach(function (album) {
                 Deact.render(
                     AlbumCard(album),
                     document.querySelector(".album-cards")
                 );
+                console.log(artist.name);
             });
         });
     }
