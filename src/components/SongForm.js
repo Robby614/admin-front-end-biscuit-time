@@ -10,7 +10,7 @@ function SongForm(id) {
         
                 
         fetch(`http://localhost:8080/api/albums/${id}/add-song`, {
-            method: "Patch",
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
