@@ -33,6 +33,7 @@ function ArtistForm() {
     }
 
     return Deact.create("form", { onsubmit: handleSubmit }, [
+        Deact.create("h5", {}, "Add Artist:"),
         Deact.create(
           "input",
           { class: "artist-name", placeholder: "Name", type: "text" },
