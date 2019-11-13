@@ -15,7 +15,7 @@ function SongForm(id) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                title: title,
+                name: name,
             })
         })
         .then(response => {
