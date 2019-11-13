@@ -20,6 +20,13 @@ body {
   border: 2px solid black;
 }
 
+.artist-card {
+  border: 2px solid black;
+  padding: 1rem;
+  margin: 3rem;
+  max-width: 200px;
+}
+
 .artist-card__imageUrl{
   max-width: 10rem;
 }
