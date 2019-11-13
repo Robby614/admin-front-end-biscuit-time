@@ -25,9 +25,37 @@ function ArtistForm() {
             })
         })
             .then(response => {
+                return response.json();
+            })
+            .then(artist => {
                 console.log(artist);
             });
     }
-}
+
+    return Deact.create("form", { onsubmit: handleSubmit }, [
+        Deact.create(
+          "input",
+          { class: "artist-name", placeholder: "Name", type: "text" },
+          ""
+        ),
+        Deact.create(
+          "input",
+          { class: "artist-image-url", placeholder: "Image Url", type: "text" },
+          ""
+        ),
+        Deact.create(
+          "input",
+          { class: "artist-record-label", placeholder: "Record Label", type: "text" },
+          ""
+        ),
+        Deact.create(
+            "input",
+            { class: "artist-home-town", placeholder: "Home Town", type: "text" },
+            ""
+          ),
+        Button({ type: "submit" }, "Submit")
+      ]);
+    }
+
 
 module.exports = ArtistForm;
