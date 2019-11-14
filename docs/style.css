@@ -67,9 +67,9 @@ header {
 }
 
 .artist-name-display {
-  font-size: 24px;
-  font: bolder;
-  padding: 10px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  padding: .5rem;
 }
 
 .album-card {
