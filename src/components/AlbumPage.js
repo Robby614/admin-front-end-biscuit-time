@@ -7,6 +7,7 @@ function AlbumPage(artist) {
   return Deact.create("article", { class: "albums-page" }, [
     AlbumForm(artist.id),
     ArtistName(artist),
+    Deact.create("h6", {}, "Albums:"),
     AlbumCards()
   ]);
 }
