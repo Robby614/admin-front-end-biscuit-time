@@ -3,11 +3,11 @@ const AlbumCards = require("./AlbumCards");
 const AlbumForm = require("./AlbumForm");
 const ArtistName = require("./ArtistName");
 
-function AlbumPage(id, artist) {
+function AlbumPage(artist) {
   return Deact.create("article", { class: "albums-page" }, [
-    AlbumForm(id),
+    AlbumForm(artist.id),
     ArtistName(artist),
-    AlbumCards(artist)
+    AlbumCards()
   ]);
 }
 

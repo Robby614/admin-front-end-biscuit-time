@@ -9,7 +9,7 @@ function SongButton(album) {
     function renderSongs() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            SongPage(album.id),
+            SongPage(album),
             document.querySelector(".content .container")
         );
         Http.getRequest(`http://localhost:8080/api/albums/${album.id}`, function (album) {

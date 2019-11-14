@@ -1,11 +1,13 @@
 const Deact = require("../libs/deact");
 const SongCards = require("./SongCards");
-const SongForm = require("./SongForm")
+const SongForm = require("./SongForm");
+const AlbumName = require("./AlbumName");
 
 
-function SongPage(id) {
+function SongPage(album) {
   return Deact.create("article", { class: "songs-page" }, [
-    SongForm(id),
+    SongForm(album.id),
+    AlbumName(album),
     SongCards()
   ]);
 }
