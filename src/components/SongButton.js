@@ -24,8 +24,7 @@ function SongButton(album) {
     return Button(
         {
             class: "song-button",
-            onclick: renderSongs,
-            style: `border: 2px solid black;`
+            onclick: renderSongs
         },
         "Songs"
     );

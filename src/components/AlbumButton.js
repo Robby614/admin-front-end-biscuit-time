@@ -25,8 +25,7 @@ function AlbumsButton(artist) {
     return Button(
         {
             class: "albums-button",
-            onclick: renderAlbums,
-            style: `border: 2px solid black;`
+            onclick: renderAlbums
         },
         "Albums"
     );
