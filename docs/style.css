@@ -62,3 +62,13 @@ form {
 header {
   width: 600px;
 }
+
+.artist-name-display {
+  font-size: 24px;
+  font: bolder;
+  padding: 10px;
+}
+
+.album-card {
+  padding: 4px;
+}
