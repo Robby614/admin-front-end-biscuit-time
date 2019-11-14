@@ -10,7 +10,7 @@
 
 
 body {
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -59,8 +59,20 @@ form {
   flex-wrap: wrap;
   max-width: 100%;
 }
-
+ 
 header {
   width: 90vw;
   max-width: 45rem;
+
+}
+
+.artist-name-display {
+  font-size: 24px;
+  font: bolder;
+  padding: 10px;
+}
+
+.album-card {
+  padding: 4px;
+
 }
