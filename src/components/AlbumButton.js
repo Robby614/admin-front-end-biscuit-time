@@ -3,7 +3,6 @@ const Button = require("./button");
 const Http = require("../utils/http");
 const AlbumCard = require("./AlbumCard");
 const AlbumPage = require("./AlbumPage");
-const ArtistCard = require("./ArtistCard")
 
 function AlbumsButton(artist) {
     function renderAlbums() {
@@ -13,19 +12,14 @@ function AlbumsButton(artist) {
             document.querySelector(".content .container")
         );
         Http.getRequest(`http://localhost:8080/api/artists/${artist.id}`,
-         function (artist) {
-            //  Deact.render(
-            //      artist.name,
-            //      document.querySelector(".album-cards")
-            //  );
-            artist.albums.forEach(function (album) {
-                Deact.render(
-                    AlbumCard(album),
-                    document.querySelector(".album-cards")
-                );
-                // console.log(artist.name);
+            function (artist) {
+                artist.albums.forEach(function (album) {
+                    Deact.render(
+                        AlbumCard(album),
+                        document.querySelector(".album-cards")
+                    );
+                });
             });
-        });
     }
 
     return Button(

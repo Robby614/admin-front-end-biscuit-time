@@ -4,7 +4,6 @@ const Http = require("../utils/http");
 const SongCard = require("./SongCard");
 const SongPage = require("./SongPage");
 
-
 function SongButton(album) {
     function renderSongs() {
         document.querySelector(".content .container").innerHTML = "";
