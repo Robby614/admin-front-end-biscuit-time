@@ -5,14 +5,14 @@ const SongCard = require("./SongCard");
 const SongPage = require("./SongPage");
 
 
-function SongButton(id) {
+function SongButton(album) {
     function renderSongs() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            SongPage(id),
+            SongPage(album.id),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/albums/${id}`, function (album) {
+        Http.getRequest(`http://localhost:8080/api/albums/${album.id}`, function (album) {
             album.songs.forEach(function (song) {
                 Deact.render(
                     SongCard(song),

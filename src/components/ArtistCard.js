@@ -8,7 +8,7 @@ function ArtistCard(artist) {
             Deact.create ("h5", { class: `artist-card__record-label`}, artist.recordLabel),
             Deact.create("h5", { class:  `artist-card__hometown`}, artist.homeTown), 
             //Deact.create("button", {}, "albums"),
-            AlbumButton(artist.id),
+            AlbumButton(artist),
             //Deact.create("input", {type: `hidden`, value: `${artist.id}`}, "")
             
     ]);

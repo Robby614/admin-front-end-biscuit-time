@@ -5,25 +5,25 @@ const AlbumCard = require("./AlbumCard");
 const AlbumPage = require("./AlbumPage");
 const ArtistCard = require("./ArtistCard")
 
-function AlbumsButton(id) {
+function AlbumsButton(artist) {
     function renderAlbums() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            AlbumPage(id),
+            AlbumPage(artist.id, artist),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/artists/${id}`,
+        Http.getRequest(`http://localhost:8080/api/artists/${artist.id}`,
          function (artist) {
-             Deact.render(
-                 artist.name,
-                 document.querySelector(".album-cards")
-             );
+            //  Deact.render(
+            //      artist.name,
+            //      document.querySelector(".album-cards")
+            //  );
             artist.albums.forEach(function (album) {
                 Deact.render(
                     AlbumCard(album),
                     document.querySelector(".album-cards")
                 );
-                console.log(artist.name);
+                // console.log(artist.name);
             });
         });
     }
